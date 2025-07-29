@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Data Type of Java Script</h1>
+    <br />
+
+    <h2 id="numbers"></h2>
+
+    <h2 id="word"></h2>
+
+    <h2 id="verify"></h2>
+
+    <h2 id="bool"></h2>
+
+    <h2 id="arr"></h2>
+
+    <script>
+      let num = 452;
+      document.getElementById("numbers").innerHTML = typeof(num);
+
+      let str = "shahid";
+      document.getElementById("word").innerHTML = typeof(str);
+
+      let bol = true;
+      document.getElementById("verify").innerHTML = typeof(bol);
+
+      let undef;
+      document.getElementById("bool").innerHTML = typeof(undef);
+
+      let city=["nagercoil", "chennai", "covai", "trichy"];
+      document.getElementById("arr").innerHTML=typeof(city);
+    </script>
+  </body>
+</html>
