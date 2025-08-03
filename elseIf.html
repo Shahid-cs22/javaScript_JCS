@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var cr = parseInt(prompt("Current Reading : "));
+        var pr = parseInt(prompt("Previous Reading : "));
+        var unit = cr - pr;
+
+        if (unit <= 100) {
+            ch = 0.75;
+        }
+        else if (unit > 100 && unit <= 200) {
+            ch = 1.5;
+        }
+        else if (unit > 200 && unit <= 300) {
+            ch = 3.50;
+        }
+        else if (unit > 300 && unit <= 400) {
+            ch = 4.10;
+        }
+        else {
+            ch = 4.50;
+        }
+
+        amount = unit * ch;
+        document.write("Total unit = " + unit + "<br>");
+        document.write("Charge per unit = " + ch + "<br>");
+        document.write("Total amount " + amount + "<br>");
+
+
+    </script>
+</body>
+
+</html>
