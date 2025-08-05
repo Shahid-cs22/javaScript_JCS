@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+
+
+    <script>
+        var day = Data().getDay();
+        document.write(day + "<br>")
+        var x = ""
+        switch (day) {
+            case 0:
+                x = "Sunday";
+                break;
+            case 1:
+                x = "Monday";
+                break;
+
+            case 3:
+                x = "Wednesdy";
+                break;
+
+            case 4:
+                x = "Thursda";
+                break;
+
+            case 5:
+                x = "Friday";
+                break;
+
+            case 6:
+                x = "Saturda";
+        }
+
+        document.getElementById("demo").innerHTML = "Today is" + x;
+    </script>
+
+</body>
+
+</html>
