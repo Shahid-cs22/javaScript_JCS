@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3 id="demo1"></h3>
+    <h3 id="demo2"></h3>
+
+
+    <script>
+
+
+        //add new element in right side
+        let num1 = ["200", "300", "400", "500", "600"];
+        num1.push("1010");
+        document.getElementById("demo1").innerHTML = num1;
+
+
+
+        //add new element in left side
+        let num2=["2", "4", "6", "8", "10"];
+        num2.unshift("0");
+         document.getElementById("demo2").innerHTML = num2;
+
+    </script>
+
+</body>
+
+</html>
