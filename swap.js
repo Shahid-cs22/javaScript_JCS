@@ -1,3 +1,27 @@
+/*
+
+String length
+String slice()
+String substring()
+String substr()
+String replace()
+String replaceAll()
+String toUpperCase()
+String toLowerCase()
+String concat()
+
+String trim()
+String trimStart()
+String trimEnd()
+String padStart()
+String padEnd()
+String charAt()
+String charCodeAt()
+String split()
+
+
+*/
+
 data =[12,103,45,75,946,32,68, 3,36,2];
 x=data.length;
 // console.log(x);
