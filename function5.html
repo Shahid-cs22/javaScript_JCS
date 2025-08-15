@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="color: rgb(202, 0, 0);">
+
+
+
+    <button onclick="myFunction()">Click me</button>
+    <h1 class="box" id="hey">Hey I'm Mohamed Shahid</h1>
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("hey");
+
+            if (x.style.backgroundColor === "white") {
+                x.style.color = "white";
+                x.style.backgroundColor = "black";
+            } else {
+                x.style.backgroundColor = "white";
+                x.style.color = "black";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
