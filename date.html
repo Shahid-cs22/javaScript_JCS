@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
 
     <p id="date"></p>
-    
-    
-    <button onclick="document.getElementById('date').innerHTML=new Date()">Click Me</button>
-    
+
+    <button onclick="showDate()"> click me</button>
+
+    <script>
+        
+        function showDate() {
+            document.getElementById("date").innerHTML = new Date();
+        }
+
+    </script>
+
+
+
 </body>
+
 </html>
