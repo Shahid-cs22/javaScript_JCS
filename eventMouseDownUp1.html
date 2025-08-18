@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body onmousedown="whichElement(event)">
+
+    <p style="background-color: rgba(255, 192, 203, 0.699);"> click here</p>
+    <h3 style="background-color: rgba(127, 255, 212, 0.795);">click me</h3>
+    <p style="background-color: lab(76.48% -38.37 66.51 / 0.795);">Hello welcome</p>
+
+    <script>
+        function whichElement(e) {
+            var data;
+            if (e.target) {
+                data = e.target;
+            }
+            else
+                if (e.srcElement);
+            {
+                data = e.srcElement;
+            }
+            var tname = data.tagName;
+            alert(tname );
+        }
+
+    </script>
+
+</body>
+
+</html>
