@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main" style="background-color: blanchedalmond; padding: 10px;">
+        <button id="btn">Click Me</button>
+    </div>
+
+    <script>
+
+        
+        document.getElementById("main").addEventListener('click', function () {
+            alert("outer");
+        });
+
+
+        document.getElementById("btn").addEventListener('click', function (event) {
+            alert('button check');
+            event.stopPropagation();
+        });
+
+    </script>
+</body>
+
+</html>
