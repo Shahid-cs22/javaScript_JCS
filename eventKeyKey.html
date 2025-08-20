@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mouse Coordinates</title>
 </head>
+
 <body style="margin: 0px;">
 
-    
+    <div style="width: 500px; height: 500px; border: 1px solid;" 
+         onmousemove="myFun(event)" 
+         onmouseout="clearText()">
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, alias.</p>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFun(e) {
+            var x = e.clientX;
+            var y = e.clientY;
+
+            var coor = "Coordinates : (" + x + ", " + y + ")";
+            document.getElementById("demo").innerHTML = coor;
+        }
+
+        function clearText() {
+            document.getElementById("demo").innerHTML = "";
+        }
+    </script>
+
 </body>
 </html>
