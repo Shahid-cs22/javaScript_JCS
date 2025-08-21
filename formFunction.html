@@ -25,12 +25,12 @@
 
             <tr>
                 <td>Favourate Performance</td>
-                <td><input type="radio" name="performance"  value="Fitken" >Fitken</td>
-                <td><input type="radio" name="performance"  value="Coltrane">Coltrane</td>
-                <td><input type="radio" name="performance"  value="Juliyad"checked>Juliyad</td>
-                <td><input type="radio" name="performance"  value="Kron">Kron</td>
-                <td><input type="radio" name="performance"  value="Wait">Wait</td>
-        
+                <td><input type="radio" name="performance" value="Fitken">Fitken</td>
+                <td><input type="radio" name="performance" value="Coltrane">Coltrane</td>
+                <td><input type="radio" name="performance" value="Juliyad" checked>Juliyad</td>
+                <td><input type="radio" name="performance" value="Kron">Kron</td>
+                <td><input type="radio" name="performance" value="Wait">Wait</td>
+
             </tr>
         </table>
 
@@ -42,16 +42,21 @@
 
     <script>
 
-        function showBoxes(frm){
-            var message="you Choose: \n"
+        function showBoxes(form) {
+            var message = "you Choose: \n"
 
-            for(i=0; i<frmlengt; i++){
-                if(frm.music[i].checked){
-                    message = message+frm.music[i].value+"\n"
+            for (i = 0; i < form.music.length; i++) {
+                if (form.music[i].checked) {
+                    message = message + form.music[i].value + "\n"
                 }
             }
 
-            for(var i=0)
+            for (var i = 0; i < form.performance.length; i++) {
+                if (form.performance[i].checked ) {
+                    message = message + "\n" + form.performance[i].value ;
+                }
+            }
+            alert(message)
         }
 
 
