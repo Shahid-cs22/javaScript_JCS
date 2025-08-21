@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>Marital Status</p>
+
+    <input type="radio" name="mstatus" id="mstatus" value="single" onclick="checkstatus()">Single.
+
+    <input type="radio" name="mstatus" id="umstate" value="maried" onclick="checkstatus()">Maried.
+
+    <p id="demo"></p>
+
+
+
+    <script>
+        function checkstatus() {
+
+            if (mstatus.checked === true) {
+                document.getElementById("demo").innerHTML = mstatus.value
+            }
+
+            if (umstate.checked == true) {
+
+                document.getElementById("demo").innerHTML=umstate.value
+            }
+
+        }
+    </script>
+</body>
+
+</html>
