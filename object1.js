@@ -3,6 +3,7 @@ const person = {
     FName: "Mohamed",
     LName: "Shahid",
     Id: 963522104077,
+    isStudent:true,
 
     fullName: function () {
         return this.FName + " " + this.LName;
@@ -22,3 +23,4 @@ console.log(person.fullName());
 console.log("--------------");
 console.log(person);
 
+console.log(person.isStudent);
