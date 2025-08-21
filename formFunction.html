@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" name="boxes">
+
+        <h2>Musical Instrument</h2>
+
+        <table border="1" cellspacing="0" cellpadding="6">
+
+            <tr>
+                <td>I Enjoy</td>
+                <td><input type="checkbox" name="music" value="classical"> classical</td>
+                <td><input type="checkbox" name="music" value="chamber"> chamber</td>
+                <td><input type="checkbox" name="music" value="jazz"> jazz</td>
+                <td><input type="checkbox" name="music" value="rock"> rock</td>
+                <td><input type="checkbox" name="music" value="punk"> punk</td>
+            </tr>
+
+            <tr>
+                <td>Favourate Performance</td>
+                <td><input type="radio" name="performance"  value="Fitken" >Fitken</td>
+                <td><input type="radio" name="performance"  value="Coltrane">Coltrane</td>
+                <td><input type="radio" name="performance"  value="Juliyad"checked>Juliyad</td>
+                <td><input type="radio" name="performance"  value="Kron">Kron</td>
+                <td><input type="radio" name="performance"  value="Wait">Wait</td>
+        
+            </tr>
+        </table>
+
+        <p>
+            <input type="button" value="Go" onclick="showBoxes(this.form)">
+        </p>
+
+    </form>
+
+    <script>
+
+        function showBoxes(frm){
+            var message="you Choose: \n"
+
+            for(i=0; i<frmlengt; i++){
+                if(frm.music[i].checked){
+                    message = message+frm.music[i].value+"\n"
+                }
+            }
+
+            for(var i=0)
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
