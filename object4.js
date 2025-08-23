@@ -2,7 +2,7 @@ function person(name,age){
     this.name=name;
     this.age=age;
     this.greet=function(){
-        return `hello my name is ${this.name}`;
+        return `hello my name is ${this.name+ " "+ this.age}`;
         // return `hello my name is ${this.age}`;
     }
 }
