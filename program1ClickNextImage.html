@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        text-align: center;
+    }
+
+    .para {
+        font-size: 40px;
+        font-weight: 400;
+    }
+</style>
+
+<body>
+
+    <div class="box">
+
+        <p id="para" style="color: rgb(207, 25, 25);">Mohamed Shahid</p>
+
+        <img id="img1" style="display:none;" src="./images/pexels-iulian-sandu-294198313-29672245.jpg" width="50%"
+            height="400" alt="">
+
+        <img id="img2" style="display: block;" src="./images/pexels-willianjusten-32715940.jpg" width="50%" height="400"
+            alt="">
+
+        <button onclick="goStyle()" type="button">Click Me &#128512</button>
+    </div>
+
+    <script>
+
+        function goStyle() {
+            para.style.color = "red";
+
+
+            if (img1.style.display === "none") {
+                img1.style.display = "block";
+                img2.style.display = "none";
+            }
+            else if (img1.style.display === "block") {
+                img1.style.display = "none";
+                img2.style.display = "block"
+            }
+        }
+
+    </script>
+</body>
+
+</html>
