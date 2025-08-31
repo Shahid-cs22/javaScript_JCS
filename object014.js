@@ -6,4 +6,5 @@ let car={
     location:"kanuakumari"
 };
 
-console.log(car.location);
+car["village"]="Eathamozhi"
+console.log(car);
