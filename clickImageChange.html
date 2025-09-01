@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #btn {
+      background-color: pink;
+      padding: 20px;
+      border-radius: 20px;
+      color: black;
+      cursor: pointer;
+    }
+
+    #myimg {
+      width: 700px;
+      height: 500px;
+      display: block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <button type="button" id="btn" onclick="changeimg()">Click Me</button>
+  <img src="./images/img4.jpg" id="myimg" alt="">
+
+  <script>
+    let sources = ["img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg"];
+
+    function changeimg() {
+      // generate random index between 0 and sources.length-1
+      const click = Math.floor(Math.random() * sources.length);  
+      let path = './images/' + sources[click];
+      document.getElementById("myimg").src = path;
+    }
+  </script>
+</body>
+</html>
