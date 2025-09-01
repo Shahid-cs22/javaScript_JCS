@@ -11,23 +11,23 @@
 
     <ul id="list"></ul>
 
-    <form action="">
-        <input type="text" name="" id="textcmd">
-        <input type="button" value="post" id="postcmd" onclick="postcmd()">
-    </form>
 
-    <script>      
-        function postcmd(){
+    <input type="text" name="" id="textcmd">
+    <input type="button" value="post" id="postcmd" onclick="postcmd()">
+
+
+    <script>
+        function postcmd() {
 
             var textval = document.getElementById('textcmd').value;
 
             var listt = document.getElementById('list');
             var newcommand = document.createElement('li');
-            newcommand.textContent=textval;
+            newcommand.textContent = textval;
 
             listt.insertBefore(newcommand, listt.firstChild);
 
-            document.getElementById('listt').value="";
+            document.getElementById('listt').value = "";
         }
 
 
