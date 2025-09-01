@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{
+        background-color: rgb(218, 213, 213);
+    }
+img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+</style>
+<body>
+
+    <div class="container">
+        <img src="./images/profile.jpeg" alt="">
+        <input type="file" name="" id="">
+    </div>
+    
+
+    <script>
+        const image = document.querySelector("img");
+        const inFile = document.querySelector("input");
+        inFile.addEventListener("change", function(){
+            image.src= URL.createObjectURL(inFile.files[0]);
+        })
+    </script>
+</body>
+</html>
