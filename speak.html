@@ -22,18 +22,55 @@
     }
 
   </style>
-  
+
   <body>
     <main id="content">
+
       <h1>Headings</h1>
+
       <p id="para">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, saepe.
       </p>
 
       <br /><br />
+
       <button type="button" id="start">Start</button>
       <button type="button" id="stop">Stop</button>
       <button type="button" id="resume">Resume</button>
+
     </main>
+
+    <script>
+        
+        let voice= new SpeechSynthesisUtterance();
+        let texPara= document.getElementById("para").innerHTML;
+
+        voice.text=texPara; //?
+        voice.rate=1;
+        voice.volume=1;
+
+        let button1= document.querySelector("#start");
+        let button2= document.querySelector("#stop");
+        let button3= document.querySelector("#resume");
+
+        button1.addEventListener('click', start)
+        button2.addEventListener('click', stop)
+        button3.addEventListener('click', resume)
+
+        function start(){
+            window.speechSynthesis.speak(voice)
+        }
+
+        function stop(){
+            window.speechSynthesis.pause();
+        }
+
+        function resume(){
+            window.speechSynthesis.resume()
+        }
+
+
+
+    </script>
   </body>
 </html>
