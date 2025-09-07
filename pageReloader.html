@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body,
+    html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        background-color: lightblue;
+    }
+
+    #loader {
+
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 16px solid rgb(15, 87, 15);
+        border-top: 16px solid blue;
+        border-right: 16px solid red;
+        border-bottom: 16px solid yellow;
+        border-left: 16px solid green;
+        animation: spin 1s linear infinite;
+
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+
+    }
+
+    #content {
+        display: none;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="loader"></div>
+    <div id="content">
+        <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt, perferendis.</p>
+    </div>
+
+
+
+    <script>
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                var loader = document.getElementById('loader');
+                loader.style.display = 'none';
+
+                var content = document.getElementById('content');
+                content.style.display = 'block';
+            }, 5000)
+        })
+    </script>
+</body>
+
+</html>
