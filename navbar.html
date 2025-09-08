@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-weight: 600;
+            background-color: linear-gradient(#e18d8d #f8bc85 #e4c22a);
+        }
+
+        .nav {
+            position: fixed;
+            width: 100%;
+            display: flex;
+            background-color: aliceblue;
+            justify-content: space-between;
+        }
+
+        img {
+            border-radius: 50px;
+        }
+
+        ul li {
+            display: inline;
+
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: brown;
+            padding: 0px 30px;
+            font-weight: bolder;
+        }
+
+        nav.pagescrool {
+            background-color: aquamarine;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav" id="nav">
+        <img src="./images/profile.jpeg" height="70px" alt="">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Portfolio</a></li>
+        </ul>
+
+    </div>
+        <div id="pagescroll">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem maiores ratione voluptas!
+            Possimus, placeat? Ipsam laborum vel beatae? Aspernatur, esse.</div>
+    <div class="style" style="height: 1000px;"></div>
+
+    <script>
+        window.onscroll = function () {
+            var nav = document.getElementById("nav");
+            if (window.scroll > 50) {
+                nav.classList.add("pagescrool")
+            }
+            else {
+                nav.classList.remove("pagescroll")
+            }
+        }
+    </script>
+</body>
+
+</html>
