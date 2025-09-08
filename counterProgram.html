@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            padding: 10px;
+
+        }
+
+        input {
+            width: 100px;
+            height: 50px;
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 5em;
+            margin: 0 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+
+        <input type="button" value="-" id="btn1"> &nbsp;
+        <p id="para">0</p> &nbsp;
+        <input type="button" value="+" id="btn2">
+    </div>
+
+    <script>
+
+        var minus = document.getElementById("btn1");
+        var plus = document.getElementById("btn2");
+        var para = document.getElementById("para");
+        let count = 0;
+
+        /* let para = document.querySelector("p");
+
+        minus.addEventListener("click", function () {
+            if (minus.value < 0  ) {
+                para.innerHTML = Number(para.innerHTML) - 1;
+            }
+
+
+        })
+        plus.addEventListener("click", function () {
+            para.innerHTML = Number(para.innerHTML) + 1;
+
+        }) 
+*/
+
+        minus.addEventListener("click", function () {
+            if (count > 0) {
+                count--;
+                para.innerHTML = count;
+            }
+        });
+
+        plus.addEventListener("click", function () {
+
+            count++;
+            para.innerHTML = count;
+
+
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>
