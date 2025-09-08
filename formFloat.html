@@ -29,24 +29,34 @@
         height: 100vh;
     }
 
-    .container{
-        background-color:thistle;
+    .container {
+        background-color: thistle;
         margin: 50px;
         padding: 50px;
     }
 
-    .head-1{
+    .head-1 {
         font-size: 30px;
         font-weight: 600;
-        
+
     }
-    .para-1{
+
+    .para-1 {
         font-size: 18px;
         padding-bottom: 30px;
     }
-label{
-    padding-top: 50px;
-}
+
+    label {
+        padding-top: 50px;
+    }
+
+    input[type=text] {
+        width: 300px;
+    }
+
+    input[type=password] {
+        width: 300px;
+    }
 </style>
 
 <body>
@@ -55,22 +65,22 @@ label{
 
 
 
-        <form action="" >
+        <form action="">
+
             <p class="head-1">Log in</p>
 
             <p class="para-1"> Need a Mailchimp account? <a href="#">Create an account</a></p>
 
             <label for=""> Username or Email</label> <br>
-            <input type="text" name="" id="">
+            <input type="text" name="" id="textip">
             <br><br>
 
-
             <label for="">Password</label><br>
-            <input type="password" name="" id=""> <br><br>
+            <input type="password" name="" id="password"> <br><br>
 
             <input type="checkbox" name="" id=""> Keep me logged in <br>
 
-            <input type="button" value="Log in">
+           
 
             <div class="link">
                 <a href="#">Forgot username?</a> &nbsp;
@@ -78,11 +88,43 @@ label{
                 <a href="#">Can't log in?</a>
             </div>
 
+             <input type="button" id="btn" value="Log in">
 
 
 
         </form>
     </div>
+
+    <script>
+        let button = document.getElementById("btn");
+
+        let text = document.getElementById("textip");
+        let password = document.getElementById("password");
+
+        button.addEventListener("mouseover", function () {
+            if (text.value != "" && password.value != "") {
+                button.style.float = "none";
+
+
+
+            }
+            else {
+                if (button.style.float === "right") {
+                    button.style.float = "left"
+
+                }
+                else {
+                    button.style.float = "right"
+                }
+
+            }
+
+
+
+        })
+
+
+    </script>
 
 </body>
 
