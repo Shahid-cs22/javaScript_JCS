@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/23b677a00e.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Permanent+Marker&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+      
+    }
+
+    .nav-bar {
+        display: flex;
+        gap: 20px;
+        justify-content: space-between;
+        background-color: antiquewhite;
+        align-items: center;
+        padding: 5px 50px;
+    }
+
+    .nav-bar img {
+        border-radius: 50%;
+    }
+
+    .nav-bar ul {
+        display: flex;
+        gap: 10px;
+        list-style: none;
+    }
+
+    .card img {
+        max-width: 300px;
+        min-height: 200px;
+    }
+
+    .img-para {
+        text-align: center;
+        color: wheat;
+    }
+
+    .card {
+
+        position: relative;
+        background-color: blanchedalmond;
+        width: 300px;
+        height: 200px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    .child {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(105, 86, 86, 0.612);
+
+    }
+
+    input {
+        width: 50px;
+        font-size: 20px;
+    }
+
+    .content {
+        display: flex;
+        gap: 20px;
+    }
+
+    .sample {
+        gap: 8rem;
+        display: flex;
+        margin: 0px 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    #one {
+
+
+        font-family: "Jost", sans-serif;
+        font-optical-sizing: auto;
+        font-weight:bold;
+        font-style: normal;
+
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+        <div class="nav-bar">
+            <img src="./images/profile.jpeg" alt="" width="50px"> <span id="one">LOGO</span>
+            <div class="content">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                    <li>Card <i class="fa-solid fa-cart-shopping"></i></li>
+                </ul>
+                <p id="para">0</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./images/img3.jpg" alt="">
+            <div class="child">
+                <div class="img-para">Lorem ipsum dolor sit amet.</div>
+                <div class="sample">
+                    <input type="button" value="-" id="btn-1">
+                    <input type="button" value="+" id="btn-2">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script>
+
+        var reject = document.getElementById("btn-1");
+        var add = document.getElementById("btn-2");
+        var para = document.getElementById("para");
+        var count = 0;
+
+        reject.addEventListener("click", function () {
+            if (count > 0) {
+                count--;
+                para.innerHTML = count;
+            }
+        });
+
+        add.addEventListener("click", function () {
+            count++;
+
+            para.innerHTML = count;
+        })
+
+
+
+    </script>
+</body>
+
+</html>
