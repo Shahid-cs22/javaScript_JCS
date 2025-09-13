@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 2em;
+        }
+
+        #btn {
+            font-size: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="mycheckbox">
+    <label for="mycheckbox">Suscribe</label>
+
+    <br><br>
+
+    <input type="radio" name="same" id="visabtn">
+    <label for="visabtn">visa</label>
+
+    <br>
+
+    <input type="radio" name="same" id="gpaybtn">
+    <label for="gpaybtn">Gpay</label>
+
+    <br>
+
+    <input type="radio" name="same" id="paybtn">
+    <label for="paybtn">Paytm</label>
+
+    <br><br>
+
+    <button type="submit" id="btn">submit</button>
+
+    <p id="subresult"></p>
+
+    <p id="payresult"></p>
+
+
+    <script>
+        var checkbox = document.getElementById("mycheckbox");
+        var visabtn = document.getElementById("visabtn");
+        var gpaybtn = document.getElementById("gpaybtn");
+        var paybtn = document.getElementById("paybtn");
+        var submit = document.getElementById("btn");
+        var subresult = document.getElementById("subresult");
+        var payresult = document.getElementById("payresult");
+
+        submit.onclick = function () {
+
+            if (checkbox.checked) {
+                subresult.innerHTML = "You are <b> Suscribe <b> "
+            }
+            else {
+                subresult.innerHTML = "You are <b> NOT Suscribe <b>"
+            }
+
+            if (visabtn.checked) {
+                payresult.innerHTML = "You clicked <b> VISA <b>"
+            }
+            else if (gpaybtn.checked) {
+                payresult.innerHTML = "You clicked <b> GPAY <b>"
+            }
+            else if (paybtn.checked) {
+                payresult.innerHTML = "You clicked <b> PAYTM <b>"
+            }
+            else {
+                payresult.innerHTML = "First click any <b> payment</b> "
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>
