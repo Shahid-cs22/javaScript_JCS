@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: antiquewhite;
+            padding: 10px 50px;
+        }
+
+        .nav-bar img {
+            border-radius: 50%;
+        }
+
+        .nav-bar ul {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+        }
+
+        .nav-bar li {
+            cursor: pointer;
+        }
+
+        .nav-bar .content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        #para1 {
+            font-weight: bold;
+            color: brown;
+        }
+
+        .product {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            width: 250px;
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+            background-color: #f9f9f9;
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .product button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: brown;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: darkred;
+        }
+
+        #productList {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        #one {
+            font-family: "Jost", sans-serif;
+            font-weight: bold;
+            font-style: normal;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="">shahid</div>
+   
+        <div class="nav-bar">
+            <img src="./images/profile.jpeg" alt="Profile" width="50px" />
+            <span id="one">LOGO</span>
+
+            <div class="content">
+                <ul>
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Services</li>
+                    <li>Contact</li>
+                    <li>
+                        Cart <i class="fa-solid fa-cart-shopping" style="color: brown;"></i>
+                    </li>
+                </ul>
+                <p id="para1">0</p>
+            </div>
+        </div>
+
+        
+        <div id="productList"></div>
+    </div>
+
+    <script>
+        const products = [
+            {
+                id: 1,
+                name: "Mohamed",
+                price: 29.99,
+                image: "images/img1.jpg",
+                description: "Ergonomic wireless mouse with adjustable DPI and silent clicks."
+            },
+            {
+                id: 2,
+                name: "Shahid",
+                price: 79.99,
+                image: "images/img4.jpg",
+                description: "RGB backlit mechanical keyboard with blue switches for tactile feedback."
+            },
+            {
+                id: 3,
+                name: "CSE",
+                price: 299.99,
+                image: "images/img1.jpg",
+                description: "27-inch 4K UHD monitor with ultra-thin bezels and vibrant color reproduction."
+            },
+            {
+                id: 4,
+                name: "Stella Marys",
+                price: 149.99,
+                image: "images/img4.jpg",
+                description: "Over-ear wireless headphones with active noise cancellation and 30-hour battery life."
+            },
+            {
+                id: 5,
+                name: "Nagercoil",
+                price: 49.99,
+                image: "images/img5.jpg",
+                description: "7-in-1 USB-C hub with HDMI, USB 3.0, SD card reader, and power delivery."
+            }
+        ];
+
+        const productList = document.getElementById("productList");
+        
+        products.forEach(product => {
+            const div = document.createElement("div");
+            div.classList.add("product");
+            div.innerHTML = `
+                <img src="${product.image}" alt="${product.name}" />
+                <h3>${product.name}</h3>
+                <p>₹${product.price}</p>
+                <p>${product.description}</p>
+                <button onclick="addToCart(${product.id})">Add to Cart</button>
+            `;
+            productList.appendChild(div);
+        });
+
+        let cartCount = 0;
+
+        const addToCart= (id)=> {
+            cartCount++;
+            document.getElementById("para1").textContent = cartCount;
+        }
+
+    </script>
+</body>
+</html>
