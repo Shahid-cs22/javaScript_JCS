@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #counterLabel {
+
+            display: block;
+            text-align: center;
+            font-size: 10em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .buttonsCombo {
+            text-align: center;
+        }
+
+        .buttons {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: hsla(271, 76%, 53%, 0.363);
+            cursor: pointer;
+            transition: background-color 0.25s;
+            border-radius: 5px;
+            color: rgb(63, 5, 5);
+            font-weight: bold;
+        }
+
+        .buttons:hover {
+            background-color: hsla(271, 76%, 53%, 0.747);
+        }
+    </style>
+</head>
+
+<body>
+
+    <label id="counterLabel">0</label> <br><br>
+    <div class="buttonsCombo">
+        <input type="button" name="" class="buttons" id="decreaseBtn" value="decreaseBtn">
+        <input type="button" name="" class="buttons" id="resetBtn" value="resetBtn">
+        <input type="button" name="" class="buttons" id="increaseBtn" value="increaseBtn">
+    </div>
+
+
+    <script>
+        const decreaseBtn = document.getElementById("decreaseBtn");
+        const resetBtn = document.getElementById("resetBtn");
+        const increaseBtn = document.getElementById("increaseBtn");
+
+        let counterLabel = document.getElementById("counterLabel");
+        let count = 0;
+
+        decreaseBtn.onclick = function () {
+            count--;
+            counterLabel.textContent = count;
+
+        }
+
+        resetBtn.onclick=function(){
+            count =0;
+            counterLabel.textContent=count;
+        }
+
+        increaseBtn.onclick = function(){
+            count ++;
+            counterLabel.textContent=count;
+        }
+    </script>
+</body>
+
+</html>
