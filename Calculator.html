@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        body{
+            height: 100vh;
+            margin: 0px;
+            align-content: center;
+            
+        }
+
+        .box{
+            background-color: rgba(128, 128, 128, 0.63);
+            color: white;
+            width: max-content;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 20px;
+            box-shadow:   2px 2px  rgba(0, 0, 0, 0.568), 2px 2px inset rgba(0, 0, 0, 0.568);
+
+        }
+
+        .row2{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        input[type="button"]{
+            font-size: 18px;
+            padding: 15px 20px;
+            background-color: hsla(0, 0%, 2%, 0.747);
+            border: none;
+            cursor: pointer;
+            color: rgb(255, 209, 2);
+            font-weight: 700;
+        }
+
+        input[type="text"]{
+            font-size: 20px;
+            padding: 10px 20px;
+            width: 85%;
+            text-align: right;
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <div class="row1">
+            <input type="text" name="" id="display" disabled>
+        </div>
+
+        <div class="row2">
+            <input type="button" value="A">
+            <input type="button" value="D">
+            <input type="button" value="%">
+            <input type="button" value="/">
+        </div>
+
+        <div class="row2">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="*">
+        </div>
+
+        <div class="row2">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="-">
+        </div>
+
+        <div class="row2">
+            <input type="button" value="1">
+            <input type="button" value="2">
+            <input type="button" value="3">
+            <input type="button" value="*">
+        </div>
+
+        <div class="row2">
+            <input type="button" value="00">
+            <input type="button" value="0">
+            <input type="button" value=".">
+            <input type="button" value="=">
+        </div>
+
+    </div>
+
+    <script>
+
+        const display = document.getElementById("display");
+        const buttons = document.querySelector('input[type = "button"]');
+        
+
+        
+    </script>
+</body>
+
+</html>
