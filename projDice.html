@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            font-family: sans-serif;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+
+        }
+
+        button {
+            font-size: 1.5rem;
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: none;
+            background-color: hsla(210, 100%, 50%, 0.685);
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+
+
+        }
+
+        button:hover {
+            background-color: hsla(230, 100%, 50%, 0.432);
+        }
+
+        button:active {
+            background-color: hsla(210, 100%, 70%);
+        }
+
+        input {
+            font-size: 2rem;
+            width: 150px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Dice Roler</h1>
+        <label for="dice"># of Dice</label>
+        <input type="number" name="" id="dice" value="1 " min="1" max="6">
+
+        <button type="button" onclick="rollDice()">Roll Dice</button>
+        <div id="diceResult"></div>
+        <div id="diceImage"></div>
+    </div>
+
+
+    <script>
+
+
+
+
+        function rollDice() {
+            const dice = document.getElementById("dice").value;
+            const diceResult = document.getElementById("diceResult");
+            const diceImage = document.getElementById("diceImage");
+
+            const values = [];
+            const images = [];
+
+            for (let i=0; i<dice; i++){
+                const value = Math.floor(Math.random()*6)+1;
+                values.push(value);
+                images.push(`<img src ="images/${values}.jpg`)
+            }
+            diceResult.textContent=`dice:${values.join(',')}`;
+            diceImage.innerHTML=images.join('');
+        }
+    </script>
+</body>
+
+</html>
