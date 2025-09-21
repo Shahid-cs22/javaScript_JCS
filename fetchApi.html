@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+
+<body>
+ 
+
+    <script>
+
+        // fetch('https://official-joke-api.appspot.com/random_joke')
+        // .then((response) =>(response.json()))
+        // .then(console.log((mes) =>(mes[0].setup, mes[0].punchline)))
+        // .catch((error) => console.log("Error"));
+
+
+        fetch('https://api.alquran.cloud/v1/surah')
+        .then((res) =>{
+            console.log(res);
+            return res.json()
+        })
+        .then((data) => console.log(data.data[113]))
+        .catch ((error) => console.log("error"))
+        
+    </script>
+</body>
+
+</html>
