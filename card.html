@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -90,13 +91,18 @@
             font-style: normal;
             font-size: 1.5rem;
         }
+
+        .listitem {
+            margin-left: 50px;
+        }
     </style>
 </head>
+
 <body>
     <div class="container">
 
-      
-   
+
+
         <div class="nav-bar">
             <img src="./images/profile.jpeg" alt="Profile" width="50px" />
             <span id="one">LOGO</span>
@@ -115,43 +121,51 @@
             </div>
         </div>
 
-        
+
         <div id="productList"></div>
+
+
+        <div class="listitem">
+            <ol id="lists">
+
+            </ol>
+        </div>
+
     </div>
 
     <script>
         const products = [
             {
                 id: 1,
-                name: "Mohamed",
+                name: "Computer",
                 price: 29.99,
                 image: "images/img1.jpg",
                 description: "Ergonomic wireless mouse with adjustable DPI and silent clicks."
             },
             {
                 id: 2,
-                name: "Shahid",
+                name: "LapTop",
                 price: 79.99,
                 image: "images/img4.jpg",
                 description: "RGB backlit mechanical keyboard with blue switches for tactile feedback."
             },
             {
                 id: 3,
-                name: "CSE",
+                name: "TV",
                 price: 299.99,
                 image: "images/img1.jpg",
                 description: "27-inch 4K UHD monitor with ultra-thin bezels and vibrant color reproduction."
             },
             {
                 id: 4,
-                name: "Stella Marys",
+                name: "Car",
                 price: 149.99,
                 image: "images/img4.jpg",
                 description: "Over-ear wireless headphones with active noise cancellation and 30-hour battery life."
             },
             {
                 id: 5,
-                name: "Nagercoil",
+                name: "Aero Plane",
                 price: 49.99,
                 image: "images/img5.jpg",
                 description: "7-in-1 USB-C hub with HDMI, USB 3.0, SD card reader, and power delivery."
@@ -159,7 +173,7 @@
         ];
 
         const productList = document.getElementById("productList");
-        
+
         products.forEach(product => {
             const div = document.createElement("div");
             div.classList.add("product");
@@ -173,13 +187,33 @@
             productList.appendChild(div);
         });
 
+
         let cartCount = 0;
 
-        const addToCart= (id)=> {
+        const addToCart = (id) => {
             cartCount++;
             document.getElementById("para1").textContent = cartCount;
-        }
+
+
+
+            const selectedProduct = products.find(p => p.id === id);
+            const listElement = document.createElement("li");
+            listElement.textContent = selectedProduct.name;
+            document.getElementById("lists").appendChild(listElement);
+        };
+
+
+
+
+
+
+
+
+
+
+
 
     </script>
 </body>
+
 </html>
